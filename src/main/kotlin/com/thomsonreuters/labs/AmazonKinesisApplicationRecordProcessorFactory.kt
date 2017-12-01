@@ -12,20 +12,20 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-package com.thomsonreuters.labs;
+package com.thomsonreuters.labs
 
-import com.amazonaws.services.kinesis.clientlibrary.interfaces.v2.IRecordProcessor;
-import com.amazonaws.services.kinesis.clientlibrary.interfaces.v2.IRecordProcessorFactory;
+import com.amazonaws.services.kinesis.clientlibrary.interfaces.v2.IRecordProcessor
+import com.amazonaws.services.kinesis.clientlibrary.interfaces.v2.IRecordProcessorFactory
 
 /**
  * Used to create new record processors.
  */
-public class AmazonKinesisApplicationRecordProcessorFactory implements IRecordProcessorFactory {
+class AmazonKinesisApplicationRecordProcessorFactory : IRecordProcessorFactory {
     /**
      * {@inheritDoc}
      */
 
-    public IRecordProcessor createProcessor() {
-        return new AmazonKinesisApplicationSampleRecordProcessor();
+    override fun createProcessor(): IRecordProcessor {
+        return AmazonKinesisApplicationSampleRecordProcessor()
     }
 }
